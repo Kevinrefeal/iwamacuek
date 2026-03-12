@@ -291,26 +291,26 @@
     color: var(--gold);
   }
 
-  /* HERO BANNER IMAGE - DESKTOP */
-  .hero-banner-image {
+  /* HERO BANNER IMAGE - DESKTOP (BESAR) */
+  .hero-banner-image.desktop-only {
     position: absolute;
     right: 5%;
     top: 50%;
     transform: translateY(-50%);
-    width: 40%;
-    max-width: 500px;
+    width: 45%;
+    max-width: 650px;
     z-index: 3;
-    border-radius: 12px;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
-    border: 1px solid var(--border);
+    box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+    border: 2px solid var(--gold);
     background: var(--card);
     opacity: 0;
     animation: fadeInRight 1s ease 0.2s forwards;
   }
 
   @keyframes fadeInRight {
-    from { opacity: 0; transform: translate(30px, -50%); }
+    from { opacity: 0; transform: translate(40px, -50%); }
     to { opacity: 1; transform: translate(0, -50%); }
   }
 
@@ -318,11 +318,11 @@
     width: 100%;
     height: auto;
     display: block;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
   }
 
   .hero-banner-image:hover img {
-    transform: scale(1.05);
+    transform: scale(1.08);
   }
 
   .banner-caption {
@@ -330,14 +330,15 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(0deg, rgba(0,0,0,0.8), transparent);
+    background: linear-gradient(0deg, rgba(0,0,0,0.9), transparent);
     color: white;
-    padding: 20px 15px 10px;
-    font-size: 0.8rem;
+    padding: 25px 15px 15px;
+    font-size: 0.9rem;
     text-align: center;
     font-family: 'Space Mono', monospace;
     color: var(--gold);
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
   }
 
   /* STATS STRIP */
@@ -938,16 +939,30 @@
   }
 
   /* RESPONSIVE */
+  @media (max-width: 1200px) {
+    .hero-banner-image.desktop-only {
+      width: 42%;
+      max-width: 550px;
+    }
+  }
+  
   @media (max-width: 1024px) {
-    .hero-banner-image {
+    .hero-banner-image.mobile-only {
+      display: block;
       position: relative;
       right: auto;
       top: auto;
       transform: none;
       width: 80%;
       max-width: 500px;
-      margin: 2rem auto 0;
+      margin: 0 auto 1.5rem;
+      border-radius: 12px;
+      border: 2px solid var(--gold);
       animation: fadeUp 1s ease 0.2s forwards;
+    }
+    
+    .hero-banner-image.desktop-only {
+      display: none;
     }
     
     .hero {
@@ -977,14 +992,14 @@
     .hero { padding-top: 6rem; }
     .stats-strip { gap: 2rem; }
     .dc-info { gap: 1.5rem; }
-    .hero-banner-image {
+    .hero-banner-image.mobile-only {
       width: 90%;
     }
   }
 
   @media (max-width: 480px) {
     .footer-grid { grid-template-columns: 1fr; }
-    .hero-banner-image {
+    .hero-banner-image.mobile-only {
       width: 100%;
     }
   }
@@ -1003,7 +1018,7 @@
     <li><a href="#pricing">Harga</a></li>
     <li><a href="#specs">Spesifikasi</a></li>
     <li><a href="#faq">FAQ</a></li>
-    <li><a href="#pricing" class="nav-cta">Mulai Sekarang</a></li>
+    <li><a href="https://pintuplayslot.it.com/register?ref=gacor" class="nav-cta" target="_blank">Mulai Sekarang</a></li>
   </ul>
   <button class="mobile-menu-btn">☰</button>
 </nav>
@@ -1029,15 +1044,15 @@
       Hosting & VPS berkualitas tinggi dengan datacenter di Bangkok — latensi rendah ke seluruh Asia Tenggara, uptime 99.9%, dan support 24/7 berbahasa Indonesia.
     </p>
     <div class="hero-actions">
-      <a href="#pricing" class="btn-primary">🚀 Lihat Paket Harga</a>
-      <a href="#specs" class="btn-secondary">📊 Cek Spesifikasi</a>
+      <a href="https://pintuplayslot.it.com/register?ref=gacor" class="btn-primary" target="_blank">🚀 Lihat Paket Harga</a>
+      <a href="https://pintuplayslot.it.com/register?ref=gacor" class="btn-secondary" target="_blank">📊 Cek Spesifikasi</a>
     </div>
   </div>
   
-  <!-- BANNER IMAGE - DESKTOP (akan muncul di samping) -->
+  <!-- BANNER IMAGE - DESKTOP (BESAR) -->
   <div class="hero-banner-image desktop-only">
     <img src="https://kevinrefeal.github.io/iwamacuek/cover.jpg" alt="ThaiNode Server Thailand Banner" onerror="this.parentElement.style.display='none'">
-    <div class="banner-caption">⚡ Bangkok Tier-3 Datacenter</div>
+    <div class="banner-caption">⚡ Bangkok Tier-3 Datacenter · Latensi Rendah ke Indonesia</div>
   </div>
 </section>
 
@@ -1051,40 +1066,10 @@
     display: block;
   }
   
-  @media (max-width: 1024px) {
-    .hero-banner-image.mobile-only {
-      display: block;
-      position: relative;
-      right: auto;
-      top: auto;
-      transform: none;
-      width: 80%;
-      max-width: 500px;
-      margin: 0 auto 1.5rem;
-      animation: fadeUp 1s ease 0.2s forwards;
-    }
-    
-    .hero-banner-image.desktop-only {
-      display: none;
-    }
-    
-    /* Pastikan margin di mobile pas */
-    .hero-content .hero-banner-image.mobile-only {
-      margin-top: 0;
-      margin-bottom: 1.5rem;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .hero-banner-image.mobile-only {
-      width: 90%;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .hero-banner-image.mobile-only {
-      width: 100%;
-    }
+  /* Pastikan margin di mobile pas */
+  .hero-content .hero-banner-image.mobile-only {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
   }
 </style>
 
@@ -1173,7 +1158,7 @@
         <li class="disabled">Backup Harian</li>
         <li class="disabled">Managed Support</li>
       </ul>
-      <a href="#" class="btn-plan btn-plan-outline">Pilih Starter</a>
+      <a href="https://pintuplayslot.it.com/register?ref=gacor" class="btn-plan btn-plan-outline" target="_blank">Pilih Starter</a>
     </div>
 
     <div class="price-card featured">
@@ -1192,7 +1177,7 @@
         <li>Backup Harian (7 hari)</li>
         <li class="disabled">Managed Support</li>
       </ul>
-      <a href="#" class="btn-plan btn-plan-filled">Pilih Business</a>
+      <a href="https://pintuplayslot.it.com/register?ref=gacor" class="btn-plan btn-plan-filled" target="_blank">Pilih Business</a>
     </div>
 
     <div class="price-card">
@@ -1210,7 +1195,7 @@
         <li>Backup Harian (30 hari)</li>
         <li>Managed Support 24/7</li>
       </ul>
-      <a href="#" class="btn-plan btn-plan-outline">Pilih Enterprise</a>
+      <a href="https://pintuplayslot.it.com/register?ref=gacor" class="btn-plan btn-plan-outline" target="_blank">Pilih Enterprise</a>
     </div>
 
   </div>
@@ -1416,8 +1401,8 @@
     Daftar gratis, tidak perlu kartu kredit. Deploy VPS pertama Anda dan rasakan perbedaannya.
   </p>
   <div class="hero-actions" style="justify-content: center;">
-    <a href="#pricing" class="btn-primary">🚀 Buat Akun Gratis</a>
-    <a href="#" class="btn-secondary">💬 Hubungi Sales</a>
+    <a href="https://pintuplayslot.it.com/register?ref=gacor" class="btn-primary" target="_blank">🚀 Buat Akun Gratis</a>
+    <a href="https://pintuplayslot.it.com/register?ref=gacor" class="btn-secondary" target="_blank">💬 Hubungi Sales</a>
   </div>
 </section>
 
@@ -1434,31 +1419,31 @@
     <div class="footer-col">
       <h4>Layanan</h4>
       <ul>
-        <li><a href="#">VPS Thailand</a></li>
-        <li><a href="#">Dedicated Server</a></li>
-        <li><a href="#">Web Hosting</a></li>
-        <li><a href="#">Domain</a></li>
-        <li><a href="#">SSL Certificate</a></li>
+        <li><a href="https://pintuplayslot.it.com/register?ref=gacor" target="_blank">VPS Thailand</a></li>
+        <li><a href="https://pintuplayslot.it.com/register?ref=gacor" target="_blank">Dedicated Server</a></li>
+        <li><a href="https://pintuplayslot.it.com/register?ref=gacor" target="_blank">Web Hosting</a></li>
+        <li><a href="https://pintuplayslot.it.com/register?ref=gacor" target="_blank">Domain</a></li>
+        <li><a href="https://pintuplayslot.it.com/register?ref=gacor" target="_blank">SSL Certificate</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Perusahaan</h4>
       <ul>
-        <li><a href="#">Tentang Kami</a></li>
-        <li><a href="#">Status Server</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Karir</a></li>
-        <li><a href="#">Hubungi Kami</a></li>
+        <li><a href="https://pintuplayslot.it.com/register?ref=gacor" target="_blank">Tentang Kami</a></li>
+        <li><a href="https://pintuplayslot.it.com/register?ref=gacor" target="_blank">Status Server</a></li>
+        <li><a href="https://pintuplayslot.it.com/register?ref=gacor" target="_blank">Blog</a></li>
+        <li><a href="https://pintuplayslot.it.com/register?ref=gacor" target="_blank">Karir</a></li>
+        <li><a href="https://pintuplayslot.it.com/register?ref=gacor" target="_blank">Hubungi Kami</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Support</h4>
       <ul>
-        <li><a href="#">Dokumentasi</a></li>
-        <li><a href="#">Live Chat</a></li>
-        <li><a href="#">WhatsApp</a></li>
-        <li><a href="#">Telegram</a></li>
-        <li><a href="#">Tiket Support</a></li>
+        <li><a href="https://pintuplayslot.it.com/register?ref=gacor" target="_blank">Dokumentasi</a></li>
+        <li><a href="https://pintuplayslot.it.com/register?ref=gacor" target="_blank">Live Chat</a></li>
+        <li><a href="https://pintuplayslot.it.com/register?ref=gacor" target="_blank">WhatsApp</a></li>
+        <li><a href="https://pintuplayslot.it.com/register?ref=gacor" target="_blank">Telegram</a></li>
+        <li><a href="https://pintuplayslot.it.com/register?ref=gacor" target="_blank">Tiket Support</a></li>
       </ul>
     </div>
   </div>
