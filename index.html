@@ -34,7 +34,6 @@
 <!-- FONTS -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Sarabun:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -290,6 +289,55 @@
   .btn-secondary:hover {
     border-color: var(--gold);
     color: var(--gold);
+  }
+
+  /* HERO BANNER IMAGE - DESKTOP */
+  .hero-banner-image {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40%;
+    max-width: 500px;
+    z-index: 3;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+    border: 1px solid var(--border);
+    background: var(--card);
+    opacity: 0;
+    animation: fadeInRight 1s ease 0.2s forwards;
+  }
+
+  @keyframes fadeInRight {
+    from { opacity: 0; transform: translate(30px, -50%); }
+    to { opacity: 1; transform: translate(0, -50%); }
+  }
+
+  .hero-banner-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .hero-banner-image:hover img {
+    transform: scale(1.05);
+  }
+
+  .banner-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(0deg, rgba(0,0,0,0.8), transparent);
+    color: white;
+    padding: 20px 15px 10px;
+    font-size: 0.8rem;
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    color: var(--gold);
+    letter-spacing: 1px;
   }
 
   /* STATS STRIP */
@@ -890,6 +938,38 @@
   }
 
   /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .hero-banner-image {
+      position: relative;
+      right: auto;
+      top: auto;
+      transform: none;
+      width: 80%;
+      max-width: 500px;
+      margin: 2rem auto 0;
+      animation: fadeUp 1s ease 0.2s forwards;
+    }
+    
+    .hero {
+      flex-direction: column;
+      text-align: center;
+      padding-top: 100px;
+    }
+    
+    .hero-content {
+      max-width: 100%;
+    }
+    
+    .hero-actions {
+      justify-content: center;
+    }
+    
+    @keyframes fadeInRight {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  }
+
   @media (max-width: 768px) {
     .nav-links { display: none; }
     .mobile-menu-btn { display: block; }
@@ -897,10 +977,16 @@
     .hero { padding-top: 6rem; }
     .stats-strip { gap: 2rem; }
     .dc-info { gap: 1.5rem; }
+    .hero-banner-image {
+      width: 90%;
+    }
   }
 
   @media (max-width: 480px) {
     .footer-grid { grid-template-columns: 1fr; }
+    .hero-banner-image {
+      width: 100%;
+    }
   }
 </style>
 </head>
@@ -931,6 +1017,13 @@
       <div class="hero-badge-dot"></div>
       Server Online · Bangkok Datacenter
     </div>
+    
+    <!-- BANNER IMAGE - MOBILE (akan muncul di bawah badge) -->
+    <div class="hero-banner-image mobile-only">
+      <img src="https://kevinrefeal.github.io/iwamacuek/cover.jpg" alt="ThaiNode Server Thailand Banner" onerror="this.parentElement.style.display='none'">
+      <div class="banner-caption">⚡ Bangkok Tier-3 Datacenter</div>
+    </div>
+    
     <h1>Server Thailand<br><span>Cepat, Andal,</span><br>Tanpa Batas</h1>
     <p class="hero-desc">
       Hosting & VPS berkualitas tinggi dengan datacenter di Bangkok — latensi rendah ke seluruh Asia Tenggara, uptime 99.9%, dan support 24/7 berbahasa Indonesia.
@@ -940,7 +1033,60 @@
       <a href="#specs" class="btn-secondary">📊 Cek Spesifikasi</a>
     </div>
   </div>
+  
+  <!-- BANNER IMAGE - DESKTOP (akan muncul di samping) -->
+  <div class="hero-banner-image desktop-only">
+    <img src="https://kevinrefeal.github.io/iwamacuek/cover.jpg" alt="ThaiNode Server Thailand Banner" onerror="this.parentElement.style.display='none'">
+    <div class="banner-caption">⚡ Bangkok Tier-3 Datacenter</div>
+  </div>
 </section>
+
+<style>
+  /* Sembunyikan mobile banner di desktop, dan sebaliknya */
+  .hero-banner-image.mobile-only {
+    display: none;
+  }
+  
+  .hero-banner-image.desktop-only {
+    display: block;
+  }
+  
+  @media (max-width: 1024px) {
+    .hero-banner-image.mobile-only {
+      display: block;
+      position: relative;
+      right: auto;
+      top: auto;
+      transform: none;
+      width: 80%;
+      max-width: 500px;
+      margin: 0 auto 1.5rem;
+      animation: fadeUp 1s ease 0.2s forwards;
+    }
+    
+    .hero-banner-image.desktop-only {
+      display: none;
+    }
+    
+    /* Pastikan margin di mobile pas */
+    .hero-content .hero-banner-image.mobile-only {
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-banner-image.mobile-only {
+      width: 90%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-banner-image.mobile-only {
+      width: 100%;
+    }
+  }
+</style>
 
 <!-- STATS -->
 <div class="stats-strip">
@@ -1329,8 +1475,18 @@
   function toggleFaq(btn) {
     const item = btn.parentElement;
     const isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
-    if (!isOpen) item.classList.add('open');
+    
+    // Close all other open FAQ items
+    document.querySelectorAll('.faq-item.open').forEach(el => {
+      if (el !== item) el.classList.remove('open');
+    });
+    
+    // Toggle current item
+    if (!isOpen) {
+      item.classList.add('open');
+    } else {
+      item.classList.remove('open');
+    }
   }
 
   // Scroll reveal
@@ -1348,6 +1504,25 @@
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
     observer.observe(el);
+  });
+  
+  // Simple mobile menu toggle
+  document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+    const navLinks = document.querySelector('.nav-links');
+    if (navLinks.style.display === 'flex') {
+      navLinks.style.display = 'none';
+    } else {
+      navLinks.style.display = 'flex';
+      navLinks.style.flexDirection = 'column';
+      navLinks.style.position = 'absolute';
+      navLinks.style.top = '70px';
+      navLinks.style.left = '0';
+      navLinks.style.right = '0';
+      navLinks.style.background = 'rgba(10,10,15,0.95)';
+      navLinks.style.backdropFilter = 'blur(20px)';
+      navLinks.style.padding = '2rem';
+      navLinks.style.borderBottom = '1px solid var(--border)';
+    }
   });
 </script>
 
