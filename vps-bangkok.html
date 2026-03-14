@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VPS Bangkok — Server Terbaik di Jantung Asia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #FDFAF5;
+  --white: #FFFFFF;
+  --dark: #1A1208;
+  --brown: #3D2B1F;
+  --gold: #C8922A;
+  --gold2: #E8A830;
+  --gold-light: #F5D98A;
+  --cream: #F5EDD8;
+  --cream2: #EDE0C4;
+  --text: #2C1F10;
+  --muted: #8B7355;
+  --border: #E8D8B8;
+  --red-thai: #B5251B;
+  --green: #2E7D4F;
+  --card: #FFFEF8;
+  --shadow: 0 2px 24px rgba(50,30,5,0.08);
+  --shadow-lg: 0 12px 60px rgba(50,30,5,0.14);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(253,250,245,0.93);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 6%;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-mark {
+  width: 36px; height: 36px;
+  background: linear-gradient(135deg, var(--gold), #A06818);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.logo-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--dark);
+  letter-spacing: -0.5px;
+}
+
+.logo-text span { color: var(--gold); }
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--dark); }
+
+.btn-nav {
+  background: var(--dark) !important;
+  color: var(--gold-light) !important;
+  padding: 0.55rem 1.3rem;
+  border-radius: 6px;
+  font-weight: 600 !important;
+  font-size: 0.82rem !important;
+  transition: all 0.2s !important;
+  letter-spacing: 0.3px;
+}
+
+.btn-nav:hover {
+  background: var(--brown) !important;
+  transform: translateY(-1px);
+}
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 68px 0 0;
+  overflow: hidden;
+}
+
+.hero-left {
+  padding: 5rem 5% 5rem 6%;
+  position: relative;
+}
+
+.hero-right {
+  background: var(--cream);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 5%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* decorative thai lotus pattern */
+.hero-right::before {
+  content: '❧';
+  position: absolute;
+  font-size: 400px;
+  color: rgba(200,146,42,0.06);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  pointer-events: none;
+  line-height: 1;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.eyebrow-line {
+  width: 28px; height: 1.5px;
+  background: var(--gold);
+}
+
+.eyebrow-text {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-family: 'DM Mono', monospace;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.8rem, 4.5vw, 4rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  color: var(--dark);
+  margin-bottom: 1.4rem;
+}
+
+h1 em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.hero-desc {
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.75;
+  max-width: 440px;
+  margin-bottom: 2.2rem;
+  font-weight: 400;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: var(--white);
+  padding: 0.9rem 2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(200,146,42,0.35);
+}
+
+.btn-primary:hover {
+  background: #B07820;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(200,146,42,0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--dark);
+  padding: 0.9rem 2rem;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1.5px solid var(--border);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.hero-badges {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hb {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.hb-icon { font-size: 0.85rem; }
+
+/* VPS card on right */
+.vps-card {
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  max-width: 380px;
+  overflow: hidden;
+  animation: rise 0.9s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes rise { to { opacity:1; transform:translateY(0); } }
+
+.vc-header {
+  background: linear-gradient(135deg, var(--dark) 0%, var(--brown) 100%);
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.vc-header::after {
+  content: '🇹🇭';
+  position: absolute;
+  font-size: 4rem;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.15;
+}
+
+.vc-plan {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  opacity: 0.7;
+  margin-bottom: 4px;
+}
+
+.vc-price {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1;
+}
+
+.vc-price small {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: rgba(255,255,255,0.5);
+}
+
+.vc-body { padding: 1.3rem; }
+
+.vc-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.vc-row:last-child { border-bottom: none; }
+
+.vc-key {
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.vc-val {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--dark);
+  font-weight: 500;
+}
+
+.vc-val.gold { color: var(--gold); }
+.vc-val.green { color: var(--green); }
+
+.vc-footer {
+  padding: 1rem 1.3rem;
+  background: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.vc-loc {
+  font-size: 0.72rem;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.vc-uptime {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.72rem;
+  color: var(--green);
+  font-family: 'DM Mono', monospace;
+}
+
+.green-dot {
+  width: 6px; height: 6px;
+  background: var(--green);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+
+/* ── SECTIONS ── */
+section { padding: 6rem 6%; }
+
+.label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 900;
+  color: var(--dark);
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  margin-bottom: 0.8rem;
+}
+
+.sub {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  max-width: 500px;
+  margin-bottom: 3rem;
+}
+
+/* ── FEATURES ── */
+.features-section { background: var(--white); }
+
+.feat-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.feat-sidebar {
+  position: sticky;
+  top: 100px;
+}
+
+.feat-sidebar h2 { margin-bottom: 0.6rem; }
+
+.feat-sidebar h2 em { display: block; font-style: italic; color: var(--gold); }
+
+.feat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.feat-item {
+  background: var(--card);
+  padding: 1.6rem 1.8rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  transition: background 0.2s;
+  border-left: 3px solid transparent;
+}
+
+.feat-item:hover {
+  background: var(--cream);
+  border-left-color: var(--gold);
+}
+
+.feat-item-icon {
+  width: 38px; height: 38px;
+  background: var(--cream);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.feat-item h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 4px;
+}
+
+.feat-item p {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ── PRICING ── */
+.pricing-section { background: var(--cream); }
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1060px;
+}
+
+.plan {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  padding: 2rem;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.plan:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+  border-color: var(--gold);
+}
+
+.plan.featured {
+  background: var(--dark);
+  border-color: var(--gold);
+  box-shadow: 0 8px 40px rgba(200,146,42,0.2);
+}
+
+.plan.featured:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 60px rgba(200,146,42,0.3);
+}
+
+.feat-ribbon {
+  position: absolute;
+  top: -13px; left: 50%; transform: translateX(-50%);
+  background: var(--gold);
+  color: var(--white);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 4px 16px;
+  border-radius: 100px;
+  white-space: nowrap;
+  font-family: 'DM Mono', monospace;
+}
+
+.plan-tier {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.plan.featured .plan-tier { color: rgba(255,255,255,0.4); }
+
+.plan-price {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--dark);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.plan.featured .plan-price { color: var(--gold-light); }
+
+.plan-price sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.plan.featured .plan-price sub { color: rgba(255,255,255,0.35); }
+
+.plan-thb {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.plan.featured .plan-thb { color: rgba(255,255,255,0.35); }
+
+.plan-divider {
+  height: 1px;
+  background: var(--border);
+  margin-bottom: 1.5rem;
+}
+
+.plan.featured .plan-divider { background: rgba(255,255,255,0.1); }
+
+.plan-list {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.plan-list li {
+  font-size: 0.85rem;
+  color: var(--muted);
+  padding: 0.4rem 0;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.plan.featured .plan-list li { color: rgba(255,255,255,0.6); }
+
+.plan-list li::before {
+  content: '✓';
+  color: var(--gold);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.plan-list li.off::before { content: '–'; color: var(--muted); }
+.plan.featured .plan-list li.off { color: rgba(255,255,255,0.2); }
+
+.btn-plan {
+  display: block;
+  text-align: center;
+  padding: 0.85rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.btn-plan-border {
+  background: transparent;
+  border: 1.5px solid var(--border);
+  color: var(--dark);
+}
+
+.btn-plan-border:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.btn-plan-gold {
+  background: var(--gold);
+  color: var(--white);
+  box-shadow: 0 4px 16px rgba(200,146,42,0.35);
+}
+
+.btn-plan-gold:hover {
+  background: #B07820;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 22px rgba(200,146,42,0.45);
+}
+
+/* ── OS ── */
+.os-section { background: var(--white); }
+
+.os-grid {
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  gap: 1.2rem;
+  max-width: 800px;
+}
+
+.os-card {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.2rem 0.8rem;
+  text-align: center;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.os-card:hover {
+  background: var(--white);
+  border-color: var(--gold);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.os-emoji { font-size: 1.6rem; margin-bottom: 6px; display: block; }
+
+.os-name {
+  font-size: 0.68rem;
+  color: var(--muted);
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* ── PAYMENT ── */
+.payment-section { background: var(--cream); }
+
+.pay-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+  gap: 1rem;
+  max-width: 780px;
+}
+
+.pay-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.2s;
+}
+
+.pay-card:hover {
+  border-color: var(--gold);
+  box-shadow: var(--shadow);
+}
+
+.pay-icon { font-size: 1.5rem; }
+
+.pay-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.pay-desc {
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+/* ── GUARANTEE ── */
+.guarantee-section {
+  background: var(--dark);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.guarantee-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(200,146,42,0.08), transparent 60%);
+}
+
+.guarantee-section > * { position: relative; z-index: 1; }
+
+.guarantee-section .label { color: var(--gold-light); opacity: 0.7; }
+
+.guarantee-section h2 { color: var(--white); }
+
+.guarantee-section .sub { color: rgba(255,255,255,0.4); margin: 0 auto 2.5rem; text-align: center; }
+
+.g-cards {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.g-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(200,146,42,0.15);
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 180px;
+  text-align: center;
+}
+
+.g-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--gold-light);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.g-label {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 1px;
+}
+
+.cta-btns {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-ghost-light {
+  background: transparent;
+  color: rgba(255,255,255,0.65);
+  padding: 0.9rem 2rem;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1.5px solid rgba(255,255,255,0.12);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.btn-ghost-light:hover {
+  border-color: var(--gold);
+  color: var(--gold-light);
+}
+
+/* ── FOOTER ── */
+footer {
+  background: #100A04;
+  padding: 3rem 6% 2rem;
+  border-top: 1px solid rgba(200,146,42,0.1);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  margin-bottom: 2rem;
+}
+
+.footer-logo .logo-text { font-size: 1.1rem; color: var(--cream2); }
+.footer-logo .logo-text span { color: var(--gold); }
+
+.footer-brand-desc {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.25);
+  line-height: 1.7;
+  margin-top: 0.7rem;
+  max-width: 260px;
+}
+
+.footer-col h5 {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 0.55rem; }
+
+.footer-col ul li a {
+  color: rgba(255,255,255,0.3);
+  text-decoration: none;
+  font-size: 0.82rem;
+  transition: color 0.2s;
+}
+
+.footer-col ul li a:hover { color: rgba(255,255,255,0.7); }
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-bottom p {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.2);
+}
+
+.footer-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  color: var(--green);
+  font-family: 'DM Mono', monospace;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 960px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-right { min-height: 400px; }
+  .feat-layout { grid-template-columns: 1fr; }
+  .feat-sidebar { position: static; }
+  .pricing-grid { grid-template-columns: 1fr; max-width: 400px; }
+  .os-grid { grid-template-columns: repeat(3,1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .nav-links a:not(.btn-nav) { display: none; }
+}
+
+@media (max-width: 480px) {
+  .footer-grid { grid-template-columns: 1fr; }
+  .os-grid { grid-template-columns: repeat(2,1fr); }
+}
+
+/* reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.reveal.show { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">
+    <div class="logo-mark">🌏</div>
+    <div class="logo-text">VPS<span>Bangkok</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#features">Fitur</a></li>
+    <li><a href="#pricing">Harga</a></li>
+    <li><a href="#os">OS</a></li>
+    <li><a href="#payment">Pembayaran</a></li>
+    <li><a href="#pricing" class="btn-nav">Pesan Sekarang</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="eyebrow">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Bangkok Datacenter · Thailand 🇹🇭</span>
+    </div>
+    <h1>VPS Bangkok,<br><em>Performa Tak<br>Tertandingi</em></h1>
+    <p class="hero-desc">
+      Server virtual premium di jantung Asia — infrastruktur Tier-3 Bangkok dengan koneksi IX langsung, latensi ultra-rendah, dan dukungan penuh bahasa Indonesia.
+    </p>
+    <div class="hero-btns">
+      <a href="#pricing" class="btn-primary">🚀 Mulai Sekarang</a>
+      <a href="#features" class="btn-outline">Pelajari Lebih Lanjut</a>
+    </div>
+    <div class="hero-badges">
+      <div class="hb"><span class="hb-icon">🛡</span> DDoS Gratis</div>
+      <div class="hb"><span class="hb-icon">⚡</span> Setup 3 Menit</div>
+      <div class="hb"><span class="hb-icon">🇮🇩</span> Support Indo 24/7</div>
+      <div class="hb"><span class="hb-icon">💳</span> Bayar Lokal</div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="vps-card">
+      <div class="vc-header">
+        <div class="vc-plan">VPS Bangkok · Business Plan</div>
+        <div class="vc-price">Rp249k<small>/bln</small></div>
+      </div>
+      <div class="vc-body">
+        <div class="vc-row">
+          <span class="vc-key">CPU</span>
+          <span class="vc-val">4 vCPU AMD EPYC</span>
+        </div>
+        <div class="vc-row">
+          <span class="vc-key">RAM</span>
+          <span class="vc-val">8 GB DDR4 ECC</span>
+        </div>
+        <div class="vc-row">
+          <span class="vc-key">Storage</span>
+          <span class="vc-val">80 GB NVMe SSD</span>
+        </div>
+        <div class="vc-row">
+          <span class="vc-key">Bandwidth</span>
+          <span class="vc-val gold">Unlimited</span>
+        </div>
+        <div class="vc-row">
+          <span class="vc-key">Network</span>
+          <span class="vc-val">10 Gbps Port</span>
+        </div>
+        <div class="vc-row">
+          <span class="vc-key">Lokasi</span>
+          <span class="vc-val">Bangkok, Thailand</span>
+        </div>
+        <div class="vc-row">
+          <span class="vc-key">Status</span>
+          <span class="vc-val green">● Online</span>
+        </div>
+      </div>
+      <div class="vc-footer">
+        <span class="vc-loc">📍 CAT Telecom, Bangkok</span>
+        <span class="vc-uptime"><div class="green-dot"></div>99.98% uptime</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="features-section">
+  <div class="feat-layout">
+    <div class="feat-sidebar reveal">
+      <span class="label">Keunggulan</span>
+      <h2>Dibangun untuk<br><em>Kecepatan</em><br>& Keandalan</h2>
+      <p class="sub" style="margin-bottom:0">Setiap komponen dipilih secara cermat untuk memastikan performa terbaik bagi bisnis Anda.</p>
+    </div>
+    <div class="feat-list">
+      <div class="feat-item reveal">
+        <div class="feat-item-icon">⚡</div>
+        <div>
+          <h4>NVMe Gen4 — I/O Tercepat</h4>
+          <p>Penyimpanan NVMe PCIe Gen4 dengan kecepatan baca 7,000 MB/s. Database dan aplikasi Anda berjalan seperti di RAM.</p>
+        </div>
+      </div>
+      <div class="feat-item reveal">
+        <div class="feat-item-icon">🔲</div>
+        <div>
+          <h4>AMD EPYC 7003 Series</h4>
+          <p>Prosesor server generasi terkini dengan 64MB L3 cache dan performa multi-thread yang luar biasa untuk workload apapun.</p>
+        </div>
+      </div>
+      <div class="feat-item reveal">
+        <div class="feat-item-icon">🌐</div>
+        <div>
+          <h4>10 Gbps Direct Peering</h4>
+          <p>Koneksi redundan langsung ke THIX & SGIX. Tidak ada transit ekstra — bandwidth langsung dari sumber ke destinasi.</p>
+        </div>
+      </div>
+      <div class="feat-item reveal">
+        <div class="feat-item-icon">🛡</div>
+        <div>
+          <h4>Anti-DDoS 1 Tbps Otomatis</h4>
+          <p>Scrubbing center berkapasitas 1 Tbps memfilter serangan sebelum mencapai server Anda — tanpa biaya tambahan sama sekali.</p>
+        </div>
+      </div>
+      <div class="feat-item reveal">
+        <div class="feat-item-icon">🔁</div>
+        <div>
+          <h4>Backup Harian Otomatis</h4>
+          <p>Snapshot dijadwalkan setiap 24 jam dengan enkripsi AES-256. Restore kapanpun hanya dengan satu klik dari dashboard.</p>
+        </div>
+      </div>
+      <div class="feat-item reveal">
+        <div class="feat-item-icon">💬</div>
+        <div>
+          <h4>Support Indonesia 24/7</h4>
+          <p>Tim teknis kami berbahasa Indonesia siap membantu via WhatsApp, Telegram, dan LiveChat — respon rata-rata di bawah 5 menit.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="pricing-section">
+  <span class="label">Paket VPS Bangkok</span>
+  <h2>Harga Jujur, Performa<br><em>Tidak Bohong</em></h2>
+  <p class="sub">Semua paket sudah termasuk IP Thailand bersih, bandwidth unlimited, DDoS protection, dan support 24/7.</p>
+  <div class="pricing-grid">
+    <div class="plan reveal">
+      <div class="plan-tier">Starter</div>
+      <div class="plan-price">Rp89k<sub>/bln</sub></div>
+      <div class="plan-thb">≈ THB 200/month</div>
+      <div class="plan-divider"></div>
+      <ul class="plan-list">
+        <li>1 vCPU — 2.4 GHz</li>
+        <li>1 GB RAM DDR4</li>
+        <li>20 GB NVMe SSD</li>
+        <li>1 TB Bandwidth</li>
+        <li>1 IPv4 Thailand</li>
+        <li>DDoS Protection</li>
+        <li class="off">Backup Harian</li>
+        <li class="off">Priority Support</li>
+      </ul>
+      <a href="#" class="btn-plan btn-plan-border">Pilih Starter</a>
+    </div>
+
+    <div class="plan featured reveal">
+      <div class="feat-ribbon">✦ Paling Diminati</div>
+      <div class="plan-tier">Business</div>
+      <div class="plan-price">Rp249k<sub>/bln</sub></div>
+      <div class="plan-thb">≈ THB 560/month</div>
+      <div class="plan-divider"></div>
+      <ul class="plan-list">
+        <li>4 vCPU — 3.2 GHz</li>
+        <li>8 GB RAM DDR4</li>
+        <li>80 GB NVMe SSD</li>
+        <li>Bandwidth Unlimited</li>
+        <li>2 IPv4 Thailand</li>
+        <li>DDoS Protection</li>
+        <li>Backup 7 Hari</li>
+        <li class="off">Priority Support</li>
+      </ul>
+      <a href="#" class="btn-plan btn-plan-gold">Pilih Business</a>
+    </div>
+
+    <div class="plan reveal">
+      <div class="plan-tier">Enterprise</div>
+      <div class="plan-price">Rp649k<sub>/bln</sub></div>
+      <div class="plan-thb">≈ THB 1,450/month</div>
+      <div class="plan-divider"></div>
+      <ul class="plan-list">
+        <li>8 vCPU — 3.6 GHz</li>
+        <li>32 GB RAM DDR4</li>
+        <li>320 GB NVMe SSD</li>
+        <li>Bandwidth Unlimited</li>
+        <li>4 IPv4 Thailand</li>
+        <li>DDoS Protection</li>
+        <li>Backup 30 Hari</li>
+        <li>Priority Support 24/7</li>
+      </ul>
+      <a href="#" class="btn-plan btn-plan-border">Pilih Enterprise</a>
+    </div>
+  </div>
+</section>
+
+<!-- OS -->
+<section id="os" class="os-section">
+  <span class="label">Sistem Operasi</span>
+  <h2>Pilih OS Favorit Anda</h2>
+  <p class="sub">Deploy dengan OS pilihan Anda dalam hitungan menit. Semua tersedia langsung dari panel kontrol.</p>
+  <div class="os-grid">
+    <div class="os-card reveal">
+      <span class="os-emoji">🐧</span>
+      <div class="os-name">Ubuntu 22.04</div>
+    </div>
+    <div class="os-card reveal">
+      <span class="os-emoji">🌀</span>
+      <div class="os-name">Debian 12</div>
+    </div>
+    <div class="os-card reveal">
+      <span class="os-emoji">🎩</span>
+      <div class="os-name">Rocky Linux</div>
+    </div>
+    <div class="os-card reveal">
+      <span class="os-emoji">⚙️</span>
+      <div class="os-name">AlmaLinux</div>
+    </div>
+    <div class="os-card reveal">
+      <span class="os-emoji">🖥️</span>
+      <div class="os-name">Windows 2022</div>
+    </div>
+    <div class="os-card reveal">
+      <span class="os-emoji">➕</span>
+      <div class="os-name">Custom ISO</div>
+    </div>
+  </div>
+</section>
+
+<!-- PAYMENT -->
+<section id="payment" class="payment-section">
+  <span class="label">Metode Pembayaran</span>
+  <h2>Bayar Pakai <em>Apapun</em></h2>
+  <p class="sub">Semua metode pembayaran lokal Indonesia tersedia. Konfirmasi otomatis, server langsung aktif.</p>
+  <div class="pay-grid">
+    <div class="pay-card reveal">
+      <span class="pay-icon">🏦</span>
+      <div>
+        <div class="pay-name">Transfer Bank</div>
+        <div class="pay-desc">BCA, Mandiri, BNI, BRI</div>
+      </div>
+    </div>
+    <div class="pay-card reveal">
+      <span class="pay-icon">💚</span>
+      <div>
+        <div class="pay-name">GoPay</div>
+        <div class="pay-desc">Konfirmasi instan</div>
+      </div>
+    </div>
+    <div class="pay-card reveal">
+      <span class="pay-icon">💜</span>
+      <div>
+        <div class="pay-name">OVO</div>
+        <div class="pay-desc">Konfirmasi instan</div>
+      </div>
+    </div>
+    <div class="pay-card reveal">
+      <span class="pay-icon">💙</span>
+      <div>
+        <div class="pay-name">DANA</div>
+        <div class="pay-desc">Konfirmasi instan</div>
+      </div>
+    </div>
+    <div class="pay-card reveal">
+      <span class="pay-icon">⬛</span>
+      <div>
+        <div class="pay-name">QRIS</div>
+        <div class="pay-desc">Scan & bayar</div>
+      </div>
+    </div>
+    <div class="pay-card reveal">
+      <span class="pay-icon">💳</span>
+      <div>
+        <div class="pay-name">Kartu Kredit</div>
+        <div class="pay-desc">Visa / Mastercard</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<section class="guarantee-section">
+  <span class="label">Jaminan Kami</span>
+  <h2>Percayakan Infrastruktur Anda</h2>
+  <p class="sub">Angka-angka yang kami janjikan, bukan sekedar slogan pemasaran.</p>
+  <div class="g-cards">
+    <div class="g-card reveal">
+      <div class="g-num">99.9%</div>
+      <div class="g-label">Uptime SLA</div>
+    </div>
+    <div class="g-card reveal">
+      <div class="g-num">7 Hari</div>
+      <div class="g-label">Garansi Uang Kembali</div>
+    </div>
+    <div class="g-card reveal">
+      <div class="g-num">3 Mnt</div>
+      <div class="g-label">Setup Otomatis</div>
+    </div>
+    <div class="g-card reveal">
+      <div class="g-num">24/7</div>
+      <div class="g-label">Support Indonesia</div>
+    </div>
+  </div>
+  <div class="cta-btns">
+    <a href="#pricing" class="btn-primary">🚀 Order VPS Bangkok Sekarang</a>
+    <a href="#" class="btn-ghost-light">💬 Konsultasi Gratis</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <div class="logo">
+          <div class="logo-mark">🌏</div>
+          <div class="logo-text">VPS<span>Bangkok</span></div>
+        </div>
+      </div>
+      <p class="footer-brand-desc">Penyedia VPS Thailand terpercaya untuk bisnis Indonesia. Infrastruktur premium, harga terjangkau.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Produk</h5>
+      <ul>
+        <li><a href="#">VPS Bangkok</a></li>
+        <li><a href="#">Dedicated Server</a></li>
+        <li><a href="#">Web Hosting</a></li>
+        <li><a href="#">Domain .th</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Informasi</h5>
+      <ul>
+        <li><a href="#">Tentang Kami</a></li>
+        <li><a href="#">Status Server</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Kebijakan Privasi</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Bantuan</h5>
+      <ul>
+        <li><a href="#">Dokumentasi</a></li>
+        <li><a href="#">WhatsApp</a></li>
+        <li><a href="#">Telegram</a></li>
+        <li><a href="#">Buka Tiket</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 VPS Bangkok — Hak cipta dilindungi</p>
+    <div class="footer-status">
+      <div class="green-dot"></div>
+      Semua sistem normal
+    </div>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      const siblings = Array.from(e.target.parentElement.children);
+      const delay = siblings.indexOf(e.target) * 80;
+      setTimeout(() => e.target.classList.add('show'), delay);
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
